@@ -1,3 +1,4 @@
+/* This component will handle the user input(prompt) */
 import { useState } from 'react'
 
 const PromptForm = ({ onSubmit }) => {
