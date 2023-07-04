@@ -19,6 +19,7 @@ const PromptForm = ({ onSubmit }) => {
                 id='prompt-input-box'
                 value={inputPrompt}
                 onChange={handleChange}
+                placeholder='Enter your prompt here'
             />
             <button type='submit' id='prompt-submit-btn'>
                 OK

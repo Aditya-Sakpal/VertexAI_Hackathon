@@ -28,7 +28,7 @@ const App = () => {
     }, [])
 
     return (
-        <div>
+        <div className='app-container'>
             <PromptForm onSubmit={handlePromptFormSubmit} />
             <PromptOutput prompt={textPrompt} />
             <Photos prompt={imagePrompt} />
