@@ -1,20 +1,29 @@
-const PromptForm = ({ prompt, handlePrompt, handlePromptChange }) => {
+import { useState } from 'react'
+
+const PromptForm = ({ onSubmit }) => {
+    const [inputPrompt, setInputPrompt] = useState('')
+
+    const handleChange = (event) => {
+        setInputPrompt(event.target.value)
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        onSubmit(inputPrompt)
+    }
+
     return (
-        <div className='prompt-area'>
-            <form onSubmit={handlePrompt} className='prompt-form'>
-                <div>
-                    <input
-                        id='prompt'
-                        placeholder='Enter your prompt here'
-                        value={prompt}
-                        onChange={handlePromptChange}
-                    />
-                </div>
-                <button id='prompt-send-btn' type='submit'>
-                    OK
-                </button>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit} className='prompt-form'>
+            <input
+                type='text'
+                id='prompt-input-box'
+                value={inputPrompt}
+                onChange={handleChange}
+            />
+            <button type='submit' id='prompt-submit-btn'>
+                OK
+            </button>
+        </form>
     )
 }
 
