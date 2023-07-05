@@ -12,6 +12,7 @@ const App = () => {
         setTextPrompt(input)
     }
 
+    /* This hook is for calling the model's api that will respond with the prompts which are to be fed to Image generator model */
     useEffect(() => {
         const fetchImagePrompt = async () => {
             try {
