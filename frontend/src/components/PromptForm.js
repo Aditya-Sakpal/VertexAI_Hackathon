@@ -1,11 +1,16 @@
 /* This component will handle the user input(prompt) */
 import { useState } from 'react'
+import VoiceRecorder from './VoiceRecorder'
 
 const PromptForm = ({ onSubmit }) => {
     const [inputPrompt, setInputPrompt] = useState('')
 
     const handleChange = (event) => {
         setInputPrompt(event.target.value)
+    }
+
+    const handlePromptUpdate = (newPrompt) => {
+        setInputPrompt(newPrompt)
     }
 
     const handleSubmit = (event) => {
@@ -22,6 +27,7 @@ const PromptForm = ({ onSubmit }) => {
                 onChange={handleChange}
                 placeholder='Enter your prompt here'
             />
+            <VoiceRecorder onPromptUpdate={handlePromptUpdate} />
             <button type='submit' id='prompt-submit-btn'>
                 OK
             </button>
