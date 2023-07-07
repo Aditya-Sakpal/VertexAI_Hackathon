@@ -1,6 +1,8 @@
 /* This component will handle the user input(prompt) */
 import { useState } from 'react'
 import VoiceRecorder from './VoiceRecorder'
+import { TextField, Box, Button } from '@mui/material'
+import SendIcon from '@mui/icons-material/Send';
 
 const PromptForm = ({ onSubmit }) => {
     const [inputPrompt, setInputPrompt] = useState('')
@@ -16,11 +18,37 @@ const PromptForm = ({ onSubmit }) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         onSubmit(inputPrompt)
+        setInputPrompt("")
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit} className='prompt-form'>
+        <Box
+        width={1600}
+        flexDirection={"row"}
+        justifyContent={"center"}
+        style={{ alignItems: "center", display: "flex" }}
+      >
+        {/* Your content */}
+        <form onSubmit={handleSubmit} className='prompt-form'>
+        <TextField
+          id="filled-multiline-flexible"
+          placeholder='Enter prompt'
+          value={inputPrompt}
+          onChange={handleChange}
+          multiline
+          maxRows={4}
+          variant="filled"
+          inputProps={{ style: { padding: 5, width: 1200, color: "black" } }}
+        >
+        
+        </TextField>
+        <Button variant="contained" startIcon={<SendIcon />} type="submit" />
+        <VoiceRecorder onPromptUpdate={handlePromptUpdate} className='form-voice-recorder' />
+        </form>
+      </Box>
+
+            {/* <form onSubmit={handleSubmit} className='prompt-form'>
                 <input
                     type='text'
                     id='prompt-input-box'
@@ -36,7 +64,7 @@ const PromptForm = ({ onSubmit }) => {
                 <VoiceRecorder onPromptUpdate={handlePromptUpdate} className='form-voice-recorder' />
                 </div>
 
-            </form>
+            </form> */}
         </div>
     )
 }
