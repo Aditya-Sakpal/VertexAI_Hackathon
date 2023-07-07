@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
+import { Button } from '@mui/material'
 
 const VoiceRecorder = ({ onPromptUpdate }) => {
     const [isRecording, setIsRecording] = useState(false)
@@ -49,9 +50,12 @@ const VoiceRecorder = ({ onPromptUpdate }) => {
     }
 
     return (
-        <button onClick={handleRecordButtonClick}>
+        // <button onClick={handleRecordButtonClick}>
+        //     {isRecording ? 'Stop Recording' : 'Record Voice'}
+        // </button>
+        <Button variant='contained' onClick={handleRecordButtonClick} style={{marginLeft: 15}}>
             {isRecording ? 'Stop Recording' : 'Record Voice'}
-        </button>
+        </Button>
     )
 }
 
