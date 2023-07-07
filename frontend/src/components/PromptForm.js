@@ -39,12 +39,15 @@ const PromptForm = ({ onSubmit }) => {
           multiline
           maxRows={4}
           variant="filled"
-          inputProps={{ style: { padding: 5, width: 1200, color: "black" } }}
+          inputProps={{ style: { padding: 5, width: 920, color: "white", textAlign:"center"} }}
+          
         >
         
         </TextField>
-        <Button variant="contained" startIcon={<SendIcon />} type="submit" />
+        
+        <Button variant="contained" startIcon={<SendIcon />} type="submit" sx={{ height:65 , marginLeft:2}}/>
         <VoiceRecorder onPromptUpdate={handlePromptUpdate} className='form-voice-recorder' />
+
         </form>
       </Box>
 

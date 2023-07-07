@@ -4,7 +4,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #e0b0b0;
+    /* background-color: #e0b0b0; */
+    background-color: #fff;
 }
 
 .app-container {
@@ -12,28 +13,37 @@ body {
     align-items: center;
     display: flex;
 }
-
-.photo-container{
-    flex: 1;
-    background-color: rgb(175, 58, 58);
-    /* height: 600px; */
-    position:absolute;
+ 
+ .photo-container{
+    /* background-color: rgb(175, 58, 58); */
+    background-color: #f3eeee;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
     top: 0;
     right: 0;
-    width: 50%;
-    height: 720px;
-    /* margin-bottom: 100px; */
-}
+    width: 30%;
+    position:absolute;
+    height: 500px;
+
+    overflow-y: hidden;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+  
+} 
 .prompt-output{
     flex: 3;
     top:0;
     left: 0;
+    background-color: #f3eeee;
     /* left: 50%; */
     position: absolute;
-
-    background-color: chartreuse;
-    width: 50%;
-    height: 720px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    /* background-color: chartreuse; */
+    border-radius: 5px;
+    width: 67%;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .prompt-form {
@@ -41,13 +51,18 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #202725;
+    background-color: #252d2a;
+    /* background-color: white; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
     padding: 20px;
     box-sizing: border-box;
     align-items: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    height: 150px;
+    /* border-radius: 3px; */
+
   }
   
   .form-input {

@@ -50,10 +50,7 @@ const VoiceRecorder = ({ onPromptUpdate }) => {
     }
 
     return (
-        // <button onClick={handleRecordButtonClick}>
-        //     {isRecording ? 'Stop Recording' : 'Record Voice'}
-        // </button>
-        <Button variant='contained' onClick={handleRecordButtonClick} style={{marginLeft: 15}}>
+        <Button variant='contained' onClick={handleRecordButtonClick} style={{marginLeft: 15,width:'200px', height: '65px' }}>
             {isRecording ? 'Stop Recording' : 'Record Voice'}
         </Button>
     )
