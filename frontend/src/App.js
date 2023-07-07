@@ -30,9 +30,21 @@ const App = () => {
 
     return (
         <div className='app-container'>
+            
             <PromptForm onSubmit={handlePromptFormSubmit} />
-            <PromptOutput prompt={textPrompt} />
-            <Photos prompt={imagePrompt} />
+            <div className="thisContainer">
+                <PromptOutput prompt={textPrompt} />
+                <Photos prompt={imagePrompt} />
+            </div>
+
+            <div className="trialContainer">
+                <div className="this1">
+
+                </div>
+                <div className="this2">
+
+                </div>
+            </div>
         </div>
     )
 }

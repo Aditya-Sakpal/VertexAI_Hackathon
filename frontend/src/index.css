@@ -4,20 +4,70 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #201f1f;
 }
 
 .app-container {
     background-color: rgb(172, 95, 254);
+    align-items: center;
+    display: flex;
 }
 
-.prompt-output {
-    background-color: rgb(226, 246, 44);
+.photo-container{
+    flex: 1;
+    background-color: rgb(175, 58, 58);
+    /* height: 600px; */
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 720px;
+    /* margin-bottom: 100px; */
 }
+.prompt-output{
+    flex: 1;
+    top:0;
+    left: 0;
+    /* left: 50%; */
+    position: absolute;
 
-.photo-container {
-    background-color: rgb(247, 111, 81);
+    background-color: chartreuse;
+    width: 50%;
+    height: 720px;
 }
 
 .prompt-form {
-    background-color: #3df6bb;
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #202725;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .form-input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+  }
+  
+
+
+  .form-voice-recorder {
+    margin-left: 130px;
+  }
+  
+  .form-submit-btn {
+    padding: 10px;
+    background-color: #35b839;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+  }

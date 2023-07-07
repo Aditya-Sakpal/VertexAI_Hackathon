@@ -19,19 +19,25 @@ const PromptForm = ({ onSubmit }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className='prompt-form'>
-            <input
-                type='text'
-                id='prompt-input-box'
-                value={inputPrompt}
-                onChange={handleChange}
-                placeholder='Enter your prompt here'
-            />
-            <VoiceRecorder onPromptUpdate={handlePromptUpdate} />
-            <button type='submit' id='prompt-submit-btn'>
-                OK
-            </button>
-        </form>
+        <div>
+            <form onSubmit={handleSubmit} className='prompt-form'>
+                <input
+                    type='text'
+                    id='prompt-input-box'
+                    value={inputPrompt}
+                    onChange={handleChange}
+                    placeholder='Enter your prompt here'
+                    className='form-input'
+                />
+                <button type='submit' id='prompt-submit-btn' className='form-submit-btn'>
+                    OK
+                </button>
+                <div className="thisbe">
+                <VoiceRecorder onPromptUpdate={handlePromptUpdate} className='form-voice-recorder' />
+                </div>
+
+            </form>
+        </div>
     )
 }
 
