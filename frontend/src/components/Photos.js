@@ -26,16 +26,8 @@ const Photos = ({ prompt }) => {
 
     return (
         <div className='photo-container'>
-            {/* {photos.map((photo, index) => (
-                <img
-                    key={index}
-                    className='photo'
-                    src={"..images/thisPhoto.png"}
-                    alt={photo.title}
-                />
-            ))} */}
 
-            <ImageList sx={{ width: 700, height: 550 }}>
+            <ImageList sx={{ height: 550 }}>
                 {photos.map((photo, index) => (
                     <ImageListItem key={index}>
                         <img
