@@ -37,9 +37,10 @@ const PromptForm = ({ onSubmit }) => {
           value={inputPrompt}
           onChange={handleChange}
           multiline
-          maxRows={4}
+          maxRows={2}
           variant="filled"
-          inputProps={{ style: { padding: 5, width: 920, color: "white", textAlign:"center"} }}
+          inputProps={{ style: { padding: 5, width: 920,color: "white", textAlign:"center",fontfamily: 'Lato, sans-serif' } }}
+          color = "secondary" 
           
         >
         
