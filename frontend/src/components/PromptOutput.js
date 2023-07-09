@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Typography, Box } from '@mui/material'
+import { Typography, Box, LinearProgress } from '@mui/material'
 import { red } from '@mui/material/colors'
 
 const PromptOutput = ({ prompt }) => {
@@ -21,19 +21,25 @@ const PromptOutput = ({ prompt }) => {
             })
             .then((response) => setOutput(response.data.response))
             .catch((error) => console.error('Error fetching results: ', error))
+            const OutputProgressBar = document.getElementById("progressbar")
+        OutputProgressBar.style.display = "none"
     }, [prompt])
+    
 
     return (
-        <>
+        
             <div className='prompt-output'>
+                
                 <Box
+                    
                     flex={6}
                     bgcolor={red}
                     sx={{
-                        maxHeight: '700px', // Set the desired maximum height
+                        maxHeight: '605px', // Set the desired maximum height
                         // overflow: "auto", // Enable scrolling when content exceeds the height
                     }}
-                >
+                > 
+
                     <Typography
                         variant='p'
                         style={{ color: 'black', backgroundColor: 'grey' }}
@@ -41,8 +47,8 @@ const PromptOutput = ({ prompt }) => {
                         {output}
                     </Typography>
                 </Box>
+                <LinearProgress id ="progressbar" color="secondary" style={{ top: 599 , borderRadius: 3 , width: 915 , left: 4, display: 'none'}} />
             </div>
-        </>
     )
 }
 
