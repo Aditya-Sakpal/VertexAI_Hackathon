@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 import { Button } from '@mui/material'
+import MicOutlinedIcon from '@mui/icons-material/MicOutlined';
 
 const VoiceRecorder = ({ onPromptUpdate }) => {
     const [isRecording, setIsRecording] = useState(false)
@@ -50,7 +51,7 @@ const VoiceRecorder = ({ onPromptUpdate }) => {
     }
 
     return (
-        <Button variant='contained' onClick={handleRecordButtonClick} style={{marginLeft: 15,width:'200px', height: '65px' }}>
+        <Button color="secondary" variant='contained'  startIcon={<MicOutlinedIcon/>} onClick={handleRecordButtonClick}  style={{marginLeft: "0.2%",width:'13%', height: '100%', color: 'secondary', left: "6%" }}>
             {isRecording ? 'Stop Recording' : 'Record Voice'}
         </Button>
     )
