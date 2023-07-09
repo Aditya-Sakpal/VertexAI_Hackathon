@@ -3,94 +3,157 @@
 */
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(16, 10, 10);
-    /* font-family: 'Raleway', sans-serif; */
-    /* background-color: rgba(32,33,35); */
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(16, 10, 10);
+  /* font-family: 'Raleway', sans-serif; */
+  /* background-color: rgba(32,33,35); */
 }
 
 .app-container {
-    background-color: rgb(172, 95, 254);
-    align-items: center;
-    display: flex;
+  /* background-color: rgb(172, 95, 254); */
+  align-items: center;
+  display: flex;
 }
- 
- .photo-container{
-    /* background-color: rgb(175, 58, 58); */
-    background-color: #1a1a1f;
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5); 
-    top: 5px;
-    right: 25px;
-    width: 530px;
-    position:absolute;
-    height: 605px;
-    overflow-y: hidden;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    /* border: 2px solid white; */
-  
+
+.photo-container{
+  /* background-color: rgb(175, 58, 58); */
+  background-color: #1a1a1f;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5); 
+  top: 1%;
+  right: 2%;
+  width: 34%;
+  position:absolute;
+  height: 80.6%;
+  overflow-y: hidden;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: 0.6%;
+  overflow-y: scroll;
+  /* border: 2px solid white; */
 } 
+
+.photo-container::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.photo-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.photo-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+}
+
+
 .prompt-output{
-    flex: 3;
-    top:5px;
-    left: 25px;
-    background-color: #1a1a1f;  
-    /* left: 50%; */
-    position: absolute;
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5); 
-    /* background-color: chartreuse; */
-    border-radius: 10px;
-    width: 60%;
-    height: 605px;
-    margin-top: 10px;
-    margin-left: 10px;
-    /* border: 2px solid white;   */
+  flex: 3;
+  top:1%;
+  left: 1.7%;
+  background-color: #1a1a1f;  
+  /* left: 50%; */
+  position: absolute;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5); 
+  /* background-color: chartreuse; */
+  border-radius: 10px;
+  width: 60%;
+  height: 80.6%;
+  margin-top: 0.6%;
+  margin-left: 0.7%;
+  overflow-y: scroll;
+  /* border: 2px solid white;   */
+}
+.prompt-output::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.prompt-output::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.prompt-output::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+}
+
+.prompt-bot-message{
+   
+  align-self: flex-start; /* Aligns the bot messages to the left end of the container */
+  background-color:#2f2f33;  /* Sets the background color for the bot messages */
+  border-radius: 5px; /* Rounds the corners of the bot message container */
+  padding: 4%; /* Adds padding to the bot message container */
+  margin: 5px; /* Sets the margin around the bot message container */
+  font-size: 14px; /* Sets the font size for the bot messages */
+  word-wrap: break-word; /* Wraps long words in the bot messages to fit within the container */
+  box-shadow: 0px 0px 5px rgb(208, 208, 208); /* Adds a box shadow to the bot message container */
+  font-family: 'Inter', sans-serif; /* Sets the font family for the bot messages */
+  font-weight: 400; /* Sets the font weight for the bot messages */
+  line-height: 24px; /* Sets the line height for the bot messages */
+  letter-spacing: 0px; /* Sets the letter spacing for the bot messages */
+  text-align: left; /* Aligns the text in the bot messages to the left */
+  margin-right: 50px; /* Sets the right margin for the bot message container */
+color:white;
+}
+.prompt-user-message {
+align-self: flex-end; /* Aligns the user messages to the right end of the container */
+background: #fff8cc; /* Sets the background color for the user messages */
+border-radius: 5px; /* Rounds the corners of the user message container */
+padding: 4%; /* Adds padding to the user message container */
+margin: 10px; /* Sets the margin around the user message container */
+font-family: Helvetica; /* Sets the font family for the user messages */
+font-weight: Regular; /* Sets the font weight for the user messages */
+font-size: 14px; /* Sets the font size for the user messages */
+text-align: end; /* Aligns the text in the user messages to the right */
+width: fit-content; /* Adjusts the width of the user message container based on content */
+height: 10px ;/* Adjusts the height of the user message container based on content */
+margin-left: auto; /* Aligns the user messages to the left side of the container */
+color: #000000; /* Sets the text color for the user messages */
+box-shadow: 0px 0px 5px rgb(208, 208, 208); /* Adds a box shadow to the user message container */
 }
 
 .prompt-form {
-    position: fixed;
-    bottom: 15px;
-    left: 35px;
-    width: 1467px;
-    background-color: #33213c;
-    /* background-color: #1f1723; */
-    /* background-color: white; */
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5); 
-    padding: 20px;
-    box-sizing: border-box;
-    align-items: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100px;
-    /* border: 2px solid white; */
-    border-radius: 10px;
-    font-family: 'Lato', sans-serif;
+  position: fixed;
+  bottom: 1.8%;
+  left: 2.3%;
+  width: 95.5%;
+  background-color: #33213c;
+  /* background-color: #1f1723; */
+  /* background-color: white; */
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 13%;
+  /* border: 2px solid white; */
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
 
-  }
-  
-  .form-input {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid white;
-    margin-left: 100px;
-  }
-  
+}
+
+.form-input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  margin-left: 100px;
+}
 
 
-  .form-voice-recorder {
-    margin-left: 130px; 
-    border: 2px solid white;
-    
-  }
+
+.form-voice-recorder {
+  margin-left: 130px; 
+  border: 2px solid white;
   
-  .form-submit-btn {
-    padding: 10px;
-    background-color: #35b839;
-    color: #000000;
-    border: 3px solid white;
-    cursor: pointer;
-    margin-left: 30px;
-  }
+}
+
+.form-submit-btn {
+  padding: 10px;
+  background-color: #35b839;
+  color: #000000;
+  border: 3px solid white;
+  cursor: pointer;
+  margin-left: 30px;
+}

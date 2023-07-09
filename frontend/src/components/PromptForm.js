@@ -19,12 +19,15 @@ const PromptForm = ({ onSubmit }) => {
     }
 
     const handleSubmit = (event) => {
-        const OutputProgressBar = document.getElementById("progressbar")
-        OutputProgressBar.style.display = "block"
+       
         event.preventDefault()
         onSubmit(inputPrompt)
         setInputPrompt("")
+        const progressbar=document.getElementById("progressbar1");
+        progressbar.style.display="block";
 
+        // const progressbar2=document.getElementById("progressbar2");
+        // progressbar2.style.display="none";
     }
     
     
@@ -43,24 +46,25 @@ const PromptForm = ({ onSubmit }) => {
         <TextField
           id="filled-multiline-flexible"
           placeholder='Enter prompt' 
-          justifyContent="center"
-          textAlign="center"
-          alignItems="center"
+          justifycontent="center"
+          textalign="center"
+          alignitems="center"
           display="flex"
           value={inputPrompt}
           onChange={handleChange}
           multiline
           maxRows={2}
           variant="filled"
-          inputProps={{ style: { padding: 5, width: 990,color: "white", textAlign:"center",fontfamily: 'Lato, sans-serif', background: "#26172d", height: 45  } }}
-          style= {{left: 90 , width: 1000 , bottom: 10}}
+          className="textfield"
+          inputProps={{ style: { padding: "0.5%", width: "99%",color: "white", textAlign:"center",fontfamily: 'Lato, sans-serif', background: "#26172d" , height: "2%"} }}
+          style= {{left: "5%" , width: "66%" , bottom: "15%",overflow:"hidden"}}
           color = "secondary" 
           
         >
         
         </TextField>
         
-        <Button color ="secondary" variant="contained" endIcon={<SendIcon />} type="submit" sx={{ height:63 , marginLeft:2, left: 90 }} >
+        <Button color ="secondary" variant="contained" endIcon={<SendIcon />} type="submit" sx={{ height:"100%" , marginLeft:"1%", left: "5%" }} >
             SEND
         </Button>
         <VoiceRecorder onPromptUpdate={handlePromptUpdate} className='form-voice-recorder' />
