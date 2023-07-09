@@ -3,6 +3,13 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { ImageList, ImageListItem } from '@mui/material'
+import {LinearProgress } from '@mui/material'
+import lottie from 'lottie-web';
+import { defineElement } from 'lord-icon-element';
+
+// define "lord-icon" custom element with default properties
+defineElement(lottie.loadAnimation);
+
 
 const Photos = ({ prompt }) => {
     const [photos, setPhotos] = useState([])
@@ -26,7 +33,7 @@ const Photos = ({ prompt }) => {
 
     return (
         <div className='photo-container'>
-
+            <LinearProgress color="secondary" style={{ top: 600 }} /> 
             <ImageList sx={{ height: 550 }}>
                 {photos.map((photo, index) => (
                     <ImageListItem key={index}>
@@ -37,9 +44,10 @@ const Photos = ({ prompt }) => {
                             loading="lazy"
                         />
                     </ImageListItem>
+                    
                 ))}
             </ImageList>
-            
+                  
         </div>
     )
 }
