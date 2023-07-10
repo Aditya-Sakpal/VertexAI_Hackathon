@@ -86,7 +86,7 @@ const PromptOutput = ({ prompt }) => {
     },[output])
 
     const type_func=(id,text)=>{
-        console.log(text);
+        // console.log(text);
         const typed = new Typed(id, {
             strings: [text],
             typeSpeed: 10,
@@ -146,6 +146,7 @@ const PromptOutput = ({ prompt }) => {
                 </Box>
                 <LinearProgress id ="progressbar1"  color="secondary" style={{ top: "99%" , borderRadius: 3 , width: "99.7%" , left: "0.3%", display: 'none',borderRadius:"5px"}} />           
             </div>
+            
     )
 }
 
