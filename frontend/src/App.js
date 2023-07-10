@@ -10,23 +10,25 @@ const App = () => {
 
     const handlePromptFormSubmit = (input) => {
         setTextPrompt(input)
+        setImagePrompt("Context :-"+input+"\n provide a good image collage related to the above context")
+        // setImagePrompt(input)
     }
 
     /* This hook is for calling the model's api that will respond with the prompts which are to be fed to Image generator model */
-    useEffect(() => {
-        const fetchImagePrompt = async () => {
-            try {
-                const response = await axios.get(
-                    'API URL for image prompt generation'
-                )
-                setImagePrompt(response.data.prompt)
-            } catch (error) {
-                console.error('Error fetching the images: ', error)
-            }
-        }
-
-        fetchImagePrompt()
-    }, [])
+    // useEffect(() => {
+    //     axios
+    //         .post('http://127.0.0.1:8080/chat', null, {
+    //             params: {
+    //                 human_msg: "Context :- " + textPrompt + "\n provide a prompt for realistic image generation considering the above context provided",
+    //             },
+    //             headers: {
+    //                 accept: 'application/json',
+    //             },
+    //         })
+    //         .then((response) => setImagePrompt(response.data.response))
+    //         .catch((error) => console.error('Error fetching results: ', error))
+           
+    // }, [textPrompt])
 
     return (
         <div className='app-container'>
