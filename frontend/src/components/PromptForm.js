@@ -26,8 +26,8 @@ const PromptForm = ({ onSubmit }) => {
         const progressbar=document.getElementById("progressbar1");
         progressbar.style.display="block";
 
-        // const progressbar2=document.getElementById("progressbar2");
-        // progressbar2.style.display="none";
+        const progressbar2=document.getElementById("progressbar2");
+        progressbar2.style.display="block";
     }
     
     

@@ -31,11 +31,13 @@ const App = () => {
     // }, [textPrompt])
 
     return (
+        <>
+        <div className='overlay'></div>
         <div className='app-container'>
             
             <PromptForm onSubmit={handlePromptFormSubmit} />
             <div className="thisContainer">
-                <PromptOutput prompt={textPrompt} />
+                <PromptOutput prompt={textPrompt}  />
                 <Photos prompt={imagePrompt} />
             </div>
 
@@ -49,6 +51,7 @@ const App = () => {
             </div>
             
         </div>
+        </>
     )
 }
 

@@ -14,9 +14,7 @@ import {LinearProgress } from '@mui/material'
 const Photos = ({ prompt }) => {
     const [photos, setPhotos] = useState([]);
     const [imageUrl,setImageUrl]=useState('');
-    // const API_URL = 'https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1';
-    // const headers = { Authorization: 'Bearer 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' };
-    /* This hook will send a POST request to Image generator which will respond with the images */
+
     useEffect(() => {
         const query = async (data) => {
             if(prompt.length > 0){
@@ -49,7 +47,7 @@ const Photos = ({ prompt }) => {
         var bruh2=document.createElement("br");
         
         img_tag.src=url;
-        // img_tag.width=500;
+        
         
         img_tag.className="imgs"
         photo_container.appendChild(img_tag);
@@ -57,6 +55,8 @@ const Photos = ({ prompt }) => {
         photo_container.appendChild(bruh2);
         
         photo_container.scrollTop = photo_container.scrollHeight;
+        const progressbar2=document.getElementById("progressbar2");
+        progressbar2.style.display="none";  
       }
     return (
 
@@ -78,6 +78,9 @@ const Photos = ({ prompt }) => {
             </ImageList> */}
            
             {/* <LinearProgress id ="progressbar2"  color="secondary" style={{ top: "99%" , borderRadius: 3 , width: "99.7%" , left: "0.3%",borderRadius:"5px"}} />   */}
+            <div id="progressbar2" style={{ position: "fixed", top: "82%", width: "33.9%", right: "2.7%",display:"none" }}>
+        <LinearProgress color="secondary" style={{ borderRadius: 3 }} />
+      </div>
         </div>
         
         
